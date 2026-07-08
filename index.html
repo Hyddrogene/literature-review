@@ -33,7 +33,7 @@
             </div>
 
             <section id="csp-section">
-                <h2 class="section-title">Modélisation et Programmation par Contraintes (PPC / CSP)</h2>
+                <h2 class="section-title">Méthode exacte (PPC, MIP, SAT, PROLOG)</h2>
                     <article class="paper-card">
     <h3 class="paper-title">[2010_matijavs_LNAI] Approche ACO pour le problème LETP</h3>
     <div class="paper-meta">
@@ -163,54 +163,6 @@
 </article>
 
 <article class="paper-card">
-    <h3 class="paper-title">[2023_hafsa_ITOR] Approche MOEA pour le problème Non spécifié</h3>
-    <div class="paper-meta">
-        <span class="badge ">MOEA</span>
-        <span class="badge">Non spécifié</span>
-        <span class="badge year">2023</span>
-        <span>Hafsa et al. (ITOR)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            professionnels à l'Académie Mandarine en utilisant plusieurs algorithmes évolutionnaires multi-objectifs (MOEA). Les auteurs ont pris en compte 18 contraintes (dures et souples) ainsi que cinq objectifs, dont deux en compétition. Les algorithmes testés incluent NSGA II, NSGA III, SPEA 2, MOEA/D et IBEA. Ils proposent également deux opérateurs génétiques personnalisés pour la mutation et le croisement, comparés aux opérateurs classiques comme PMX et Swap. L'approche est divisée en deux phases principales. La première phase utilise une heuristique constructive qui crée un emploi du temps vide, puis insère les formations une à une en tenant compte des contraintes dures. Cette heuristique priorise les cours de plus longue durée et ceux avec des contraintes supplémentaires sur les ressources (salles, formateurs, dispositifs). La seconde phase améliore les solutions obtenues à l'aide des algorithmes évolutionnaires. Cette heuristique produit une population initiale valide sans nécessiter de corrections supplémentaires, bien que les solutions manquent parfois de diversité. Des expériences ont été menées sur des instances de différentes tailles (petites, moyennes et grandes). Les résultats montrent que les algorithmes IBEA et NSGA III produisent les meilleures performances sur les instances moyennes et grandes. L'opérateur de mutation personnalisé MAPTmo a surpassé l'opérateur classique Swap dans les petites instances, tandis que l'opérateur de croisement PMX a été retenu pour ses bonnes performances par rapport à MAPTco. Le processus de réglage des paramètres a été réalisé à l'aide du package i-race. Les résultats montrent MOEA/D n'est pas adapté à ce problème.L'étude à mis à disposition un nouveau jeu de données , intitulé MAPTD, destiné à la communauté scientifique.
-        </p>
-    </div>
-</article>
-
-<article class="paper-card">
-    <h3 class="paper-title">[2021_kusuma_IJACSA] Approche métaheuristique (GA, SA, AB) pour le problème UCTP</h3>
-    <div class="paper-meta">
-        <span class="badge meta">métaheuristique (GA, SA, AB)</span>
-        <span class="badge">UCTP</span>
-        <span class="badge year">2021</span>
-        <span>Kusuma et al. (IJACSA)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            Ce travail a été développé dans le cadre d'une réforme des universités indonésiennes, permettant aux étudiants de suivre des cours en dehors de leur cursus d'études. Ici, les cours sont dispensés en ligne, ce qui élimine la nécessité de salles de classe physiques. Le processus d'affectation repose sur les créneaux horaires disponibles et les demandes des cours, qui sont facultatifs et non obligatoires. Trois méthodes métaheuristiques ont été testées pour optimiser ce modèle : les colonies d'abeilles artificielles, le recuit simulé basé sur la théorie des nuages, et les algorithmes génétiques. Le recuit simulé s'est avéré être la méthode la plus performante, en particulier pour minimiser le nombre de demandes non satisfaites, surpassant significativement les autres méthodes. Selon les résultats, lorsque le nombre d'étudiants est faible, le recuit simulé réduit de 91\% les demandes non satisfaites par rapport à l'algorithme génétique. Pour un nombre d'étudiants plus élevé, cette réduction tombe à 62\%. Cependant, le modèle présente certaines limitations. Il ne prend pas en charge toutes les contraintes abordées dans la littérature classique, notamment les préférences des étudiants et des enseignants.
-        </p>
-    </div>
-</article>
-
-<article class="paper-card">
-    <h3 class="paper-title">[2013_qaurooni_ASC] Approche algorithme mémétique pour le problème UCTP</h3>
-    <div class="paper-meta">
-        <span class="badge meta">algorithme mémétique</span>
-        <span class="badge">UCTP</span>
-        <span class="badge year">2013</span>
-        <span>Qaurooni et al. (ASC)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            Cet article, destiné aux institutions universitaires, présente et évalue les performances d'un algorithme mémétique. Les auteurs ont pour objectif de développer un algorithme compétitif tout en explorant les différents opérateurs évolutionnaires pour les problèmes de planification. L'algorithme développé représente les emplois du temps sous forme de matrice bidimensionnelle, où les lignes correspondent aux salles et les colonnes aux créneaux horaires. Le processus de génération de la population initiale est basé sur l'algorithme de mélange de Fisher-Yates. À la fin de cette phase d'initialisation, des emplois du temps partiellement remplis sont générés, accompagnés d'une liste d'événements non planifiés. La population passe ensuite par trois étapes principales : recombinaison, mutation et recherche locale. La recombinaison passe par une sélection qui s'effectue de manière aléatoire chez les deux parents, en veillant à ce que les sélections soient complémentaires l'une de l'autre. Les créneaux sélectionnés sont ensuite insérés chez l'un des parents. Une fois cette étape effectuée, les doublons sont supprimés. Puis les événements non planifiés sont réintégrés au hasard dans la solution. L'étape suivante, la mutation, consiste à vider certains créneaux horaires et à réinsérer les événements non planifiés dans des créneaux disponibles. La recherche locale intervient ensuite, elle cherche à ajuster la répartition des événements déjà planifiés, et elle accepte temporairement des solutions sous-optimales pour échapper aux optima locaux. Pour les tests, ils ont utilisés un benchmark existant.Cette approche à été comparée à trois autres algorithmes, l'algorithme mémétique a montré de meilleures performances pour les petites et moyennes instances, mais a été surpassé pour les grandes instances.
-        </p>
-    </div>
-</article>
-
-<article class="paper-card">
     <h3 class="paper-title">[2020_Odeniyi_AJRCS] Approche MIP + SA pour le problème HSTT</h3>
     <div class="paper-meta">
         <span class="badge meta">MIP + SA</span>
@@ -242,21 +194,7 @@
     </div>
 </article>
 
-<article class="paper-card">
-    <h3 class="paper-title">[2023_sun_DSM] Approche TS pour le problème HSTT</h3>
-    <div class="paper-meta">
-        <span class="badge meta">TS</span>
-        <span class="badge">HSTT</span>
-        <span class="badge year">2023</span>
-        <span>Sun et al. (DSM)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            Cet article s'incrit dans le cadre de la réforme des lycées en Chine, les institutions ont introduit un système de cours optionnels. Il s'agit d'un problème HSTT, Pour répondre à cette nouvelle organisation, un algorithme Two-Phase Tabu Search (TPTS) efficace en deux phases a été proposé. La première phase de cet algorithme se concentre sur la recherche d'une solution faisable, tandis que la seconde vise à améliorer cette solution. L'algorithme exploite les caractéristiques du modèle de coloration de graphe, ce qui permet de réduire les calculs redondants lors de la recherche de voisinage, augmentant ainsi l'efficacité du processus. En parallèle, une formulation MIP a été développée pour ce problème, qui est une variante réaliste du problème de planification des lycées. Le modèle a été enrichi avec l'introduction du concept de "groupe simultané", tout en prenant en compte des contraintes souples comme la synchronisation des plans d'enseignement, l'absence de périodes creuses pour les enseignants et une répartition équilibrée des cours. Dans cette étude, 15 cas de référence basés sur des lycées chinois ont été créés, répartis en trois échelles (petite, moyenne et grande). Les résultats montrent que les solutions obtenues avec l'algorithme proposé sont comparables, voire supérieures, à celles obtenues avec la programmation linéaire mixte pour 14 des 15 instances testées. Bien que le taux moyen de satisfaction des contraintes souples ait dépassé 71\%, certaines contraintes n'ont pas pu être entièrement respectées en raison des contradictions entre les règles et l'allocation des ressources.
-        </p>
-    </div>
-</article>
+
 
 <article class="paper-card">
     <h3 class="paper-title">[2015_Phillips_COR] Approche MIP pour le problème UCTP</h3>
@@ -270,22 +208,6 @@
         <strong>Résumé de lecture :</strong>
         <p style="margin: 5px 0 0 0;">
             ) L'Université d'Auckland a servi de cadre pour valider ce modèle, complété par des tests réalisés sur des instances du concours ITC-2007. Ces expérimentations ont confirmé l'efficacité de la méthode pour des instances de grande taille et des situations réelles.
-        </p>
-    </div>
-</article>
-
-<article class="paper-card">
-    <h3 class="paper-title">[2017_Saviniec_ASC] Approche VNS-ILS pour le problème HSTT</h3>
-    <div class="paper-meta">
-        <span class="badge meta">VNS-ILS</span>
-        <span class="badge">HSTT</span>
-        <span class="badge year">2017</span>
-        <span>Saviniec et al. (ASC)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            Cet article aborde le problème HSTT, en proposant des approches métaheuristiques avec une recherche locale itérée (ILS) et de recherche à voisinage variable (VNS). Les auterus ont introduit de nouvelles structures de voisinage et des routines de recherche locale adaptées. Les algorithmes développés utilisent deux opérateurs de voisinage génériques, capables d'être facilement adaptés à des problèmes similaires. L'hybridation de ces opérateurs de voisinage améliore l'efficacité des procédures de recherche locale, en permettant une exploration plus approfondie et plus efficace de l'espace de solutions. En alternant entre deux procédures de recherche locale, ces algorithmes exploitent pleinement les solutions potentielles, optimisant ainsi l'affectation des créneaux horaires aux enseignants et aux salles. Les algorithmes ont été validés sur plusieurs variantes du problème, en utilisant sept instances publiques ainsi qu'un nouvel ensemble de données comprenant 34 instances réelles issues de lycées brésiliens, y compris des cas de grande taille. Les résultats expérimentaux démontrent que les algorithmes surpassent les approches existantes, en trouvant les meilleures solutions pour 38 des 41 instances testées. De plus, les algorithmes offrent des solutions optimales ou quasi optimales, surpassant les bornes inférieures générées par les MIP. Même la version la plus simple de ces algorithmes a surpassé le solveur gagnant du concours ITC2011 dans un grand nombre d'instances réelles. Les instances collectées auprès de différents lycées brésiliens ont été mises à disposition de la communauté.
         </p>
     </div>
 </article>
@@ -370,37 +292,8 @@
     </div>
 </article>
 
-<article class="paper-card">
-    <h3 class="paper-title">[2015_lewis_EJOR] Approche TS+SA pour le problème PE-CTT</h3>
-    <div class="paper-meta">
-        <span class="badge meta">TS+SA</span>
-        <span class="badge">PE-CTT</span>
-        <span class="badge year">2015</span>
-        <span>Lewis et al. (EJOR)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            Cet article traite du problème PE-CTT et propose un algorithme métaheuristique en deux étapes pour le résoudre de manière approximative. L'étude souligne que l'augmentation de la connectivité de l'espace des solutions améliore généralement les performances. Cela a conduit à la conception d'opérateurs de voisinage offrant plus de flexibilité. L'algorithme se déroule en deux phases. La première phase, une solution initiale est construite en assignant les événements un par un à des créneaux horaires, tout en évitant les violations des contraintes dures. Cette étape se concentre uniquement sur la faisabilité du problème, sans prendre en compte les contraintes souples. Puis cette méthode utilise la recherche tabou avec une fonction de coût simple, adaptée de l'algorithme PartialCol. Ensuite pendant la deuxième phase, le recuit simulé (SA) est utilisé, avec pour objectif de minimiser le nombre de violations des contraintes souples. Le refroidissement se fait via des chaînes de Markov, en fonction des opérateurs de voisinage utilisés. Cette phase ne nécessite qu'un seul paramètre à ajuster : la température finale. Plusieurs opérateurs de voisinage ont été définis, dont l'un sélectionne aléatoirement deux événements distincts et tente de les échanger dans des créneaux horaires disponibles (en vérifiant la disponibilité des salles). Trois autres opérateurs sont basés sur le mécanisme des chaînes de Kempe, combinés avec le premier opérateur de voisinage. Les résultats expérimentaux, obtenus sur ITC-2007, montrent que l'algorithme proposé fonctionne aussi bien voir mieux que les autres méthodes de la littérature.
-        </p>
-    </div>
-</article>
 
-<article class="paper-card">
-    <h3 class="paper-title">[2017_Skoullis_ASC] Approche CSO pour le problème HSTT</h3>
-    <div class="paper-meta">
-        <span class="badge meta">CSO</span>
-        <span class="badge">HSTT</span>
-        <span class="badge year">2017</span>
-        <span>Skoullis et al. (ASC)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            Dans cette contribution, il est présenté l'application d'un algorithme hybride basé sur l'optimisation par essaim de chats (CSO) pour résoudre le problème HSTT. L'algorithme s'inspire du comportement des chats lors de la recherche de nourriture. L'optimum global est assimilé à la nourriture, tandis que l'espace des solutions représente la zone où cette nourriture se trouve. Chaque solution est modélisée par un chat qui explore cet espace de recherche. L'initialisation de l'algorithme se fait en générant un ensemble de chats, chacun ayant une position spécifique dans l'espace des solutions, composé de M dimensions, avec des vitesses distinctes pour chaque dimension et une valeur de fitness calculée à l'aide d'une fonction d'évaluation. Les chats représentent l'emploi du temps hebdomadaire sous la forme d'une matrice bidimensionnelle, où les lignes correspondent aux classes et les colonnes aux créneaux horaires disponibles. Chaque chat explore l'espace de recherche dans le but de trouver une solution améliorée, c'est-à-dire une solution avec une meilleure valeur de fitness. L'algorithme fonctionne selon deux modes distincts : le mode de recherche et le mode de poursuite. En mode de recherche, chaque chat observe son environnement pour déterminer la prochaine action à entreprendre. En mode de poursuite, le chat se déplace rapidement dans l'espace de solutions à la recherche de la meilleure position. Les performances de cet algorithme ont été évaluées à l'aide de données réelles, collectées dans divers lycées en Grèce. Les résultats montrent que l'algorithme proposé surpasse les autres méthodes publiées dans la littérature, tant en termes de qualité des solutions obtenues qu'en termes de réduction du temps de calcul.
-        </p>
-    </div>
-</article>
+
 
 <article class="paper-card">
     <h3 class="paper-title">[2015_AlYakoob_COR] Approche MIP pour le problème HSTT</h3>
@@ -418,21 +311,7 @@
     </div>
 </article>
 
-<article class="paper-card">
-    <h3 class="paper-title">[2021_Siddiqui_ESA] Approche metaheuristique pour le problème HSTT</h3>
-    <div class="paper-meta">
-        <span class="badge meta">metaheuristique</span>
-        <span class="badge">HSTT</span>
-        <span class="badge year">2021</span>
-        <span>Siddiqui et al. (ESA)</span>
-    </div>
-    <div class="notes-section">
-        <strong>Résumé de lecture :</strong>
-        <p style="margin: 5px 0 0 0;">
-            deja fait
-        </p>
-    </div>
-</article>
+
 
 <article class="paper-card">
     <h3 class="paper-title">[2016_mendez_COR] Approche MIP pour le problème PE-CTT + SSP</h3>
@@ -466,6 +345,143 @@
     </div>
 </article>
 
+
+            </section>
+
+            <section id="meta-section">
+                <h2 class="section-title">Heuristiques, Métaheuristiques et Recherche Locale</h2>
+<article class="paper-card">
+    <h3 class="paper-title">[2023_hafsa_ITOR] Approche MOEA pour le problème Non spécifié</h3>
+    <div class="paper-meta">
+        <span class="badge ">MOEA</span>
+        <span class="badge">Non spécifié</span>
+        <span class="badge year">2023</span>
+        <span>Hafsa et al. (ITOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            professionnels à l'Académie Mandarine en utilisant plusieurs algorithmes évolutionnaires multi-objectifs (MOEA). Les auteurs ont pris en compte 18 contraintes (dures et souples) ainsi que cinq objectifs, dont deux en compétition. Les algorithmes testés incluent NSGA II, NSGA III, SPEA 2, MOEA/D et IBEA. Ils proposent également deux opérateurs génétiques personnalisés pour la mutation et le croisement, comparés aux opérateurs classiques comme PMX et Swap. L'approche est divisée en deux phases principales. La première phase utilise une heuristique constructive qui crée un emploi du temps vide, puis insère les formations une à une en tenant compte des contraintes dures. Cette heuristique priorise les cours de plus longue durée et ceux avec des contraintes supplémentaires sur les ressources (salles, formateurs, dispositifs). La seconde phase améliore les solutions obtenues à l'aide des algorithmes évolutionnaires. Cette heuristique produit une population initiale valide sans nécessiter de corrections supplémentaires, bien que les solutions manquent parfois de diversité. Des expériences ont été menées sur des instances de différentes tailles (petites, moyennes et grandes). Les résultats montrent que les algorithmes IBEA et NSGA III produisent les meilleures performances sur les instances moyennes et grandes. L'opérateur de mutation personnalisé MAPTmo a surpassé l'opérateur classique Swap dans les petites instances, tandis que l'opérateur de croisement PMX a été retenu pour ses bonnes performances par rapport à MAPTco. Le processus de réglage des paramètres a été réalisé à l'aide du package i-race. Les résultats montrent MOEA/D n'est pas adapté à ce problème.L'étude à mis à disposition un nouveau jeu de données , intitulé MAPTD, destiné à la communauté scientifique.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2021_kusuma_IJACSA] Approche métaheuristique (GA, SA, AB) pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge meta">métaheuristique (GA, SA, AB)</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2021</span>
+        <span>Kusuma et al. (IJACSA)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Ce travail a été développé dans le cadre d'une réforme des universités indonésiennes, permettant aux étudiants de suivre des cours en dehors de leur cursus d'études. Ici, les cours sont dispensés en ligne, ce qui élimine la nécessité de salles de classe physiques. Le processus d'affectation repose sur les créneaux horaires disponibles et les demandes des cours, qui sont facultatifs et non obligatoires. Trois méthodes métaheuristiques ont été testées pour optimiser ce modèle : les colonies d'abeilles artificielles, le recuit simulé basé sur la théorie des nuages, et les algorithmes génétiques. Le recuit simulé s'est avéré être la méthode la plus performante, en particulier pour minimiser le nombre de demandes non satisfaites, surpassant significativement les autres méthodes. Selon les résultats, lorsque le nombre d'étudiants est faible, le recuit simulé réduit de 91\% les demandes non satisfaites par rapport à l'algorithme génétique. Pour un nombre d'étudiants plus élevé, cette réduction tombe à 62\%. Cependant, le modèle présente certaines limitations. Il ne prend pas en charge toutes les contraintes abordées dans la littérature classique, notamment les préférences des étudiants et des enseignants.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2013_qaurooni_ASC] Approche algorithme mémétique pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge meta">algorithme mémétique</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2013</span>
+        <span>Qaurooni et al. (ASC)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article, destiné aux institutions universitaires, présente et évalue les performances d'un algorithme mémétique. Les auteurs ont pour objectif de développer un algorithme compétitif tout en explorant les différents opérateurs évolutionnaires pour les problèmes de planification. L'algorithme développé représente les emplois du temps sous forme de matrice bidimensionnelle, où les lignes correspondent aux salles et les colonnes aux créneaux horaires. Le processus de génération de la population initiale est basé sur l'algorithme de mélange de Fisher-Yates. À la fin de cette phase d'initialisation, des emplois du temps partiellement remplis sont générés, accompagnés d'une liste d'événements non planifiés. La population passe ensuite par trois étapes principales : recombinaison, mutation et recherche locale. La recombinaison passe par une sélection qui s'effectue de manière aléatoire chez les deux parents, en veillant à ce que les sélections soient complémentaires l'une de l'autre. Les créneaux sélectionnés sont ensuite insérés chez l'un des parents. Une fois cette étape effectuée, les doublons sont supprimés. Puis les événements non planifiés sont réintégrés au hasard dans la solution. L'étape suivante, la mutation, consiste à vider certains créneaux horaires et à réinsérer les événements non planifiés dans des créneaux disponibles. La recherche locale intervient ensuite, elle cherche à ajuster la répartition des événements déjà planifiés, et elle accepte temporairement des solutions sous-optimales pour échapper aux optima locaux. Pour les tests, ils ont utilisés un benchmark existant.Cette approche à été comparée à trois autres algorithmes, l'algorithme mémétique a montré de meilleures performances pour les petites et moyennes instances, mais a été surpassé pour les grandes instances.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2023_sun_DSM] Approche TS pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">TS</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2023</span>
+        <span>Sun et al. (DSM)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article s'incrit dans le cadre de la réforme des lycées en Chine, les institutions ont introduit un système de cours optionnels. Il s'agit d'un problème HSTT, Pour répondre à cette nouvelle organisation, un algorithme Two-Phase Tabu Search (TPTS) efficace en deux phases a été proposé. La première phase de cet algorithme se concentre sur la recherche d'une solution faisable, tandis que la seconde vise à améliorer cette solution. L'algorithme exploite les caractéristiques du modèle de coloration de graphe, ce qui permet de réduire les calculs redondants lors de la recherche de voisinage, augmentant ainsi l'efficacité du processus. En parallèle, une formulation MIP a été développée pour ce problème, qui est une variante réaliste du problème de planification des lycées. Le modèle a été enrichi avec l'introduction du concept de "groupe simultané", tout en prenant en compte des contraintes souples comme la synchronisation des plans d'enseignement, l'absence de périodes creuses pour les enseignants et une répartition équilibrée des cours. Dans cette étude, 15 cas de référence basés sur des lycées chinois ont été créés, répartis en trois échelles (petite, moyenne et grande). Les résultats montrent que les solutions obtenues avec l'algorithme proposé sont comparables, voire supérieures, à celles obtenues avec la programmation linéaire mixte pour 14 des 15 instances testées. Bien que le taux moyen de satisfaction des contraintes souples ait dépassé 71\%, certaines contraintes n'ont pas pu être entièrement respectées en raison des contradictions entre les règles et l'allocation des ressources.
+        </p>
+    </div>
+</article>
+
+
+
+<article class="paper-card">
+    <h3 class="paper-title">[2017_Saviniec_ASC] Approche VNS-ILS pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">VNS-ILS</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2017</span>
+        <span>Saviniec et al. (ASC)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article aborde le problème HSTT, en proposant des approches métaheuristiques avec une recherche locale itérée (ILS) et de recherche à voisinage variable (VNS). Les auterus ont introduit de nouvelles structures de voisinage et des routines de recherche locale adaptées. Les algorithmes développés utilisent deux opérateurs de voisinage génériques, capables d'être facilement adaptés à des problèmes similaires. L'hybridation de ces opérateurs de voisinage améliore l'efficacité des procédures de recherche locale, en permettant une exploration plus approfondie et plus efficace de l'espace de solutions. En alternant entre deux procédures de recherche locale, ces algorithmes exploitent pleinement les solutions potentielles, optimisant ainsi l'affectation des créneaux horaires aux enseignants et aux salles. Les algorithmes ont été validés sur plusieurs variantes du problème, en utilisant sept instances publiques ainsi qu'un nouvel ensemble de données comprenant 34 instances réelles issues de lycées brésiliens, y compris des cas de grande taille. Les résultats expérimentaux démontrent que les algorithmes surpassent les approches existantes, en trouvant les meilleures solutions pour 38 des 41 instances testées. De plus, les algorithmes offrent des solutions optimales ou quasi optimales, surpassant les bornes inférieures générées par les MIP. Même la version la plus simple de ces algorithmes a surpassé le solveur gagnant du concours ITC2011 dans un grand nombre d'instances réelles. Les instances collectées auprès de différents lycées brésiliens ont été mises à disposition de la communauté.
+        </p>
+    </div>
+</article>
+
+
+<article class="paper-card">
+    <h3 class="paper-title">[2015_lewis_EJOR] Approche TS+SA pour le problème PE-CTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">TS+SA</span>
+        <span class="badge">PE-CTT</span>
+        <span class="badge year">2015</span>
+        <span>Lewis et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article traite du problème PE-CTT et propose un algorithme métaheuristique en deux étapes pour le résoudre de manière approximative. L'étude souligne que l'augmentation de la connectivité de l'espace des solutions améliore généralement les performances. Cela a conduit à la conception d'opérateurs de voisinage offrant plus de flexibilité. L'algorithme se déroule en deux phases. La première phase, une solution initiale est construite en assignant les événements un par un à des créneaux horaires, tout en évitant les violations des contraintes dures. Cette étape se concentre uniquement sur la faisabilité du problème, sans prendre en compte les contraintes souples. Puis cette méthode utilise la recherche tabou avec une fonction de coût simple, adaptée de l'algorithme PartialCol. Ensuite pendant la deuxième phase, le recuit simulé (SA) est utilisé, avec pour objectif de minimiser le nombre de violations des contraintes souples. Le refroidissement se fait via des chaînes de Markov, en fonction des opérateurs de voisinage utilisés. Cette phase ne nécessite qu'un seul paramètre à ajuster : la température finale. Plusieurs opérateurs de voisinage ont été définis, dont l'un sélectionne aléatoirement deux événements distincts et tente de les échanger dans des créneaux horaires disponibles (en vérifiant la disponibilité des salles). Trois autres opérateurs sont basés sur le mécanisme des chaînes de Kempe, combinés avec le premier opérateur de voisinage. Les résultats expérimentaux, obtenus sur ITC-2007, montrent que l'algorithme proposé fonctionne aussi bien voir mieux que les autres méthodes de la littérature.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2017_Skoullis_ASC] Approche CSO pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">CSO</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2017</span>
+        <span>Skoullis et al. (ASC)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Dans cette contribution, il est présenté l'application d'un algorithme hybride basé sur l'optimisation par essaim de chats (CSO) pour résoudre le problème HSTT. L'algorithme s'inspire du comportement des chats lors de la recherche de nourriture. L'optimum global est assimilé à la nourriture, tandis que l'espace des solutions représente la zone où cette nourriture se trouve. Chaque solution est modélisée par un chat qui explore cet espace de recherche. L'initialisation de l'algorithme se fait en générant un ensemble de chats, chacun ayant une position spécifique dans l'espace des solutions, composé de M dimensions, avec des vitesses distinctes pour chaque dimension et une valeur de fitness calculée à l'aide d'une fonction d'évaluation. Les chats représentent l'emploi du temps hebdomadaire sous la forme d'une matrice bidimensionnelle, où les lignes correspondent aux classes et les colonnes aux créneaux horaires disponibles. Chaque chat explore l'espace de recherche dans le but de trouver une solution améliorée, c'est-à-dire une solution avec une meilleure valeur de fitness. L'algorithme fonctionne selon deux modes distincts : le mode de recherche et le mode de poursuite. En mode de recherche, chaque chat observe son environnement pour déterminer la prochaine action à entreprendre. En mode de poursuite, le chat se déplace rapidement dans l'espace de solutions à la recherche de la meilleure position. Les performances de cet algorithme ont été évaluées à l'aide de données réelles, collectées dans divers lycées en Grèce. Les résultats montrent que l'algorithme proposé surpasse les autres méthodes publiées dans la littérature, tant en termes de qualité des solutions obtenues qu'en termes de réduction du temps de calcul.
+        </p>
+    </div>
+</article>
+
+
+<article class="paper-card">
+    <h3 class="paper-title">[2021_Siddiqui_ESA] Approche metaheuristique pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">metaheuristique</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2021</span>
+        <span>Siddiqui et al. (ESA)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            deja fait
+        </p>
+    </div>
+</article>
+
 <article class="paper-card">
     <h3 class="paper-title">[2005_Thompson_JOM] Approche SA pour le problème UCTP</h3>
     <div class="paper-meta">
@@ -482,48 +498,13 @@
     </div>
 </article>
 
-            </section>
-
-            <section id="meta-section">
-                <h2 class="section-title">Heuristiques, Métaheuristiques et Recherche Locale</h2>
-                
-                <article class="paper-card">
-                    <h3 class="paper-title">Hybrid Metaheuristics for University Course Timetabling</h3>
-                    <div class="paper-meta">
-                        <span class="badge meta">Métaheuristiques</span>
-                        <span class="badge year">2024</span>
-                        <span>L. Garcia, M. Martinez — *Computers & Operations Research*</span>
-                    </div>
-                    <div class="notes-section">
-                        <strong>Ce qu'il faut retenir :</strong>
-                        <ul>
-                            <li>Combinaison d'une phase de recherche locale (Simulated Annealing) avec un mécanisme de coupure basé sur les graphes de conflits.</li>
-                            <li>Très efficace pour s'extraire des \textit{minima locaux} sur les instances fortement sur-contraintes.</li>
-                            <li><strong>Limites :</strong> Moins performant sur la preuve d'incohérence (infeasibility) par rapport aux approches pures CSP.</li>
-                        </ul>
-                    </div>
-                </article>
+  
             </section>
 
             <section id="para-section">
                 <h2 class="section-title">Stratégies Parallèles et Portefeuilles de Solveurs</h2>
                 
-                <article class="paper-card">
-                    <h3 class="paper-title">Parallel Portfolio Strategies for Combinatorial Optimization</h3>
-                    <div class="paper-meta">
-                        <span class="badge para">Parallélisme / Portfolio</span>
-                        <span class="badge year">2025</span>
-                        <span>K. Richter, T. Wang — *AAAI Conference*</span>
-                    </div>
-                    <div class="notes-section">
-                        <strong>Ce qu'il faut retenir :</strong>
-                        <ul>
-                            <li>Analyse de la diversification algorithmique par injection de bruit stochastique sur les heuristiques d'ordonnancement.</li>
-                            <li>Démonstration de l'accélération du \textit{Time-to-Solution} en exploitant plusieurs threads en parallèle avec partages de clauses ou de bornes.</li>
-                            <li><strong>Application directe :</strong> Justifie mes choix de conception concernant l'implémentation multi-thread et l'impact des politiques de redémarrage fréquents (*restarts*).</li>
-                        </ul>
-                    </div>
-                </article>
+ 
             </section>
 
             <footer>
