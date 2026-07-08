@@ -1,8 +1,3 @@
-Voici le code mis à jour. J'ai structuré la page de manière plus réaliste en y intégrant trois vraies catégories de la littérature EDT (Formulations CSP, Métaheuristiques/Heuristiques, et Approches Portefeuilles/Parallélisme), avec des exemples concrets de fiches de lecture que tu n'auras plus qu'à personnaliser.
-
-J'ai aussi ajouté une barre latérale de navigation rapide pour que ce soit super simple à utiliser quand ta liste va s'allonger.
-
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -39,23 +34,454 @@ J'ai aussi ajouté une barre latérale de navigation rapide pour que ce soit sup
 
             <section id="csp-section">
                 <h2 class="section-title">Modélisation et Programmation par Contraintes (PPC / CSP)</h2>
-                
-                <article class="paper-card">
-                    <h3 class="paper-title">Constraint-Based Approach for Educational Timetabling Problems</h3>
-                    <div class="paper-meta">
-                        <span class="badge csp">CSP / PPC</span>
-                        <span class="badge year">2022</span>
-                        <span>J. Smith, A. Johnson — *Journal of Scheduling*</span>
-                    </div>
-                    <div class="notes-section">
-                        <strong>Ce qu'il faut retenir :</strong>
-                        <ul>
-                            <li>Présentation d'une décomposition standard des contraintes d'EDT (contraintes d'indisponibilité, précédences des cours).</li>
-                            <li>Comparaison de l'impact des techniques de filtrage (AllDifferent, Cumulative) sur la réduction de l'espace de recherche.</li>
-                            <li><strong>Lien avec mes travaux :</strong> Base utile pour valider la modélisation initiale des variables de choix d'intervalles temporels.</li>
-                        </ul>
-                    </div>
-                </article>
+                    <article class="paper-card">
+    <h3 class="paper-title">[2010_matijavs_LNAI] Approche ACO pour le problème LETP</h3>
+    <div class="paper-meta">
+        <span class="badge meta">ACO</span>
+        <span class="badge">LETP</span>
+        <span class="badge year">2010</span>
+        <span>Matijavs et al. (LNAI)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            universitaire. Ce travail démontre que l'ACO, peut s'avérer efficace dans des contextes réels de planification des emplois du temps.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2019_darmawan_ICCTIM] Approche MIP pour le problème CB-CTT</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">CB-CTT</span>
+        <span class="badge year">2019</span>
+        <span>Darmawan et al. (ICCTIM)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Ce travail propose une approche de modélisation multi-objectifs pour résoudre le problème CBCTT. Le modèle développé repose sur deux objectifs principaux : la minimisation du nombre de places vides et celle des coûts d'ouverture de cours, tout en intégrant les préférences horaires des enseignants. En plus de garantir une flexibilité pour les enseignants, il permet une meilleure utilisation des ressources et un ajustement aux politiques de l'université. Testé sur des données d'une université de Taïwan. Le modèle a démontré sa supériorité par rapport aux méthodes manuelles.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2013_azadeh_IJSOM] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2013</span>
+        <span>Azadeh et al. (IJSOM)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article propose une approche MIP multi-objectifs, appliquée aux écoles iraniennes. Le modèle se distingue par la prise en compte des interactions entre étudiants et enseignants. La fonction objectif combine la maximisation de la participation des étudiants aux cours et celle de l'engagement des enseignants à les dispenser, intégrant ainsi quatre objectifs distincts. De plus, plusieurs contraintes temporelles ont été ajoutées. Il est supposé que les cours se répartissent sur deux ou trois séances. Les données d'entrée sont fournies au format Excel.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2004_daskalaki_EJOR] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2004</span>
+        <span>Daskalaki et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article propose un modèle MIP pour le problème UCTP, en intégrant des fonctionnalités pour les écoles d'ingénierie des universités grecques. Le modèle prend en compte un large éventail de règles opérationnelles et d'exigences communes à la plupart des institutions académiques. L'objectif principal, en tant que problème d'optimisation, est de minimiser une fonction de coût linéaire. En ajustant de manière adéquate les coefficients de coût dans la fonction objectif, il est possible de réduire l'espace de solution. La flexibilité du modèle découle de l'utilisation de variables multidimensionnelles. Une large variété de règles et d'exigences peut être modélisée grâce à des contraintes appropriées. Le modèle distingue les contraintes dures et souples. Un exemple est présenté avec un département d'ingénierie, comprenant un grand nombre de cours et d'enseignants.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[1969_lawrie_TCJ] Approche MIP pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">1969</span>
+        <span>Lawrie et al. (TCJ)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Ce travail propose une approche en MIP en plusieurs phases. L'objectif principal est de garantir une allocation efficace des ressources, tout en respectant les contraintes spécifiques aux établissements scolaires. Le processus de construction est divisé en deux étapes clé. Tout d'abord la gestion des affectations des enseignants pour qu'ils n'aient pas des séances de cours qui se chevauchent et respecter les contraintes de disponibilité. Puis la seconde phase consiste à ajouter des contraintes supplémentaires de répartition équitable pour les enseignements sur l'ensemble de la semaine. Les écoles étudiées dans cette étude, disposent d'un ratio élèves/enseignants relativement bas. Les enseignants ont un nombre équivalent d'heures d'enseignement important. La majorité des instances ont produit plusieurs solutions viables.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[1973_akkoyunlu_TCJ] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">1973</span>
+        <span>Akkoyunlu et al. (TCJ)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article présente un modèle MIP pour résoudre le problème UCTP dans les universités américaines, spécifiquement au sein d'un département. Le modèle distingue entre deux types de contraintes : les contraintes dures, ayant des coûts infinis et les contraintes souples, avec des coûts positifs ou négatifs, qui représentent des préférences indésirables ou souhaitables. Le modèle est suffisamment robuste pour répondre aux exigences usuelles des institutions. Il part de l'hypothèse qu'il n'y a pas de limite au nombre total de salles de classe disponibles. Le processus de résolution se déroule en deux étapes. La première étape vise à formuler les contraintes de manière compacte pour simplifier le modèle. La seconde étape a pour objectif d'obtenir une solution faisable rapidement. Les contraintes du modèle sont relativement indépendantes. Plusieurs coûts ont été définis, l'un basé sur le nombre d'étudiants dans chaque promotion, et un autre tenant compte du fait que les horaires en fin de journée ou en fin de semaine sont généralement moins désirables.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[1976_breslaw_SEPS] Approche IP pour le problème TAP</h3>
+    <div class="paper-meta">
+        <span class="badge para">IP</span>
+        <span class="badge">TAP</span>
+        <span class="badge year">1976</span>
+        <span>Breslaw et al. (SEPS)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            a été achevée en deux semaines. Le personnel administratif a joué un rôle important dans la préparation des données.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[1992_kang_EJOR] Approche prolog pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge csp">prolog</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">1992</span>
+        <span>Kang et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Ce travail porte sur le problème UCTP pour l'Université d'Ottawa, au Canada. Les auteurs ont adopté une approche basée sur la programmation logique, en utilisant le calcul des prédicats du premier ordre. Un algorithme spécifique a été développé et implémenté dans WPROLOG. L'algorithme a permis de satisfaire l'ensemble des contraintes de premier ordre, ainsi qu'un nombre variable de contraintes de second ordre, pour résoudre un problème de satisfaction de contraintes à grande échelle, avec des applications réelles dans des institutions académiques de grande taille. Deux types de résultats ont été observés : soit des solutions entièrement réalisables ont été obtenues, soit certains cours se sont avérés non programmables dans le cadre des contraintes spécifiées. Dans ce dernier cas, les cours non programmables ont été exclus du calcul initial, permettant ainsi de générer un emploi du temps optimal pour les autres cours. Les cours exclus ont ensuite été programmés manuellement. Un test complet du programme a été effectué en utilisant les données de l'université, couvrant 2268 séances de cours, 167 salles de classe et 363 programmes académiques. Quelques séances n'ont pas pu être intégrées dans certaines instances. Les résultats obtenus sont particulièrement avant-gardistes, marquant une avancée significative.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2023_hafsa_ITOR] Approche MOEA pour le problème Non spécifié</h3>
+    <div class="paper-meta">
+        <span class="badge ">MOEA</span>
+        <span class="badge">Non spécifié</span>
+        <span class="badge year">2023</span>
+        <span>Hafsa et al. (ITOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            professionnels à l'Académie Mandarine en utilisant plusieurs algorithmes évolutionnaires multi-objectifs (MOEA). Les auteurs ont pris en compte 18 contraintes (dures et souples) ainsi que cinq objectifs, dont deux en compétition. Les algorithmes testés incluent NSGA II, NSGA III, SPEA 2, MOEA/D et IBEA. Ils proposent également deux opérateurs génétiques personnalisés pour la mutation et le croisement, comparés aux opérateurs classiques comme PMX et Swap. L'approche est divisée en deux phases principales. La première phase utilise une heuristique constructive qui crée un emploi du temps vide, puis insère les formations une à une en tenant compte des contraintes dures. Cette heuristique priorise les cours de plus longue durée et ceux avec des contraintes supplémentaires sur les ressources (salles, formateurs, dispositifs). La seconde phase améliore les solutions obtenues à l'aide des algorithmes évolutionnaires. Cette heuristique produit une population initiale valide sans nécessiter de corrections supplémentaires, bien que les solutions manquent parfois de diversité. Des expériences ont été menées sur des instances de différentes tailles (petites, moyennes et grandes). Les résultats montrent que les algorithmes IBEA et NSGA III produisent les meilleures performances sur les instances moyennes et grandes. L'opérateur de mutation personnalisé MAPTmo a surpassé l'opérateur classique Swap dans les petites instances, tandis que l'opérateur de croisement PMX a été retenu pour ses bonnes performances par rapport à MAPTco. Le processus de réglage des paramètres a été réalisé à l'aide du package i-race. Les résultats montrent MOEA/D n'est pas adapté à ce problème.L'étude à mis à disposition un nouveau jeu de données , intitulé MAPTD, destiné à la communauté scientifique.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2021_kusuma_IJACSA] Approche métaheuristique (GA, SA, AB) pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge meta">métaheuristique (GA, SA, AB)</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2021</span>
+        <span>Kusuma et al. (IJACSA)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Ce travail a été développé dans le cadre d'une réforme des universités indonésiennes, permettant aux étudiants de suivre des cours en dehors de leur cursus d'études. Ici, les cours sont dispensés en ligne, ce qui élimine la nécessité de salles de classe physiques. Le processus d'affectation repose sur les créneaux horaires disponibles et les demandes des cours, qui sont facultatifs et non obligatoires. Trois méthodes métaheuristiques ont été testées pour optimiser ce modèle : les colonies d'abeilles artificielles, le recuit simulé basé sur la théorie des nuages, et les algorithmes génétiques. Le recuit simulé s'est avéré être la méthode la plus performante, en particulier pour minimiser le nombre de demandes non satisfaites, surpassant significativement les autres méthodes. Selon les résultats, lorsque le nombre d'étudiants est faible, le recuit simulé réduit de 91\% les demandes non satisfaites par rapport à l'algorithme génétique. Pour un nombre d'étudiants plus élevé, cette réduction tombe à 62\%. Cependant, le modèle présente certaines limitations. Il ne prend pas en charge toutes les contraintes abordées dans la littérature classique, notamment les préférences des étudiants et des enseignants.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2013_qaurooni_ASC] Approche algorithme mémétique pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge meta">algorithme mémétique</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2013</span>
+        <span>Qaurooni et al. (ASC)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article, destiné aux institutions universitaires, présente et évalue les performances d'un algorithme mémétique. Les auteurs ont pour objectif de développer un algorithme compétitif tout en explorant les différents opérateurs évolutionnaires pour les problèmes de planification. L'algorithme développé représente les emplois du temps sous forme de matrice bidimensionnelle, où les lignes correspondent aux salles et les colonnes aux créneaux horaires. Le processus de génération de la population initiale est basé sur l'algorithme de mélange de Fisher-Yates. À la fin de cette phase d'initialisation, des emplois du temps partiellement remplis sont générés, accompagnés d'une liste d'événements non planifiés. La population passe ensuite par trois étapes principales : recombinaison, mutation et recherche locale. La recombinaison passe par une sélection qui s'effectue de manière aléatoire chez les deux parents, en veillant à ce que les sélections soient complémentaires l'une de l'autre. Les créneaux sélectionnés sont ensuite insérés chez l'un des parents. Une fois cette étape effectuée, les doublons sont supprimés. Puis les événements non planifiés sont réintégrés au hasard dans la solution. L'étape suivante, la mutation, consiste à vider certains créneaux horaires et à réinsérer les événements non planifiés dans des créneaux disponibles. La recherche locale intervient ensuite, elle cherche à ajuster la répartition des événements déjà planifiés, et elle accepte temporairement des solutions sous-optimales pour échapper aux optima locaux. Pour les tests, ils ont utilisés un benchmark existant.Cette approche à été comparée à trois autres algorithmes, l'algorithme mémétique a montré de meilleures performances pour les petites et moyennes instances, mais a été surpassé pour les grandes instances.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2020_Odeniyi_AJRCS] Approche MIP + SA pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">MIP + SA</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2020</span>
+        <span>Odeniyi et al. (AJRCS)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article aborde le problème HSTT dans les lycées nigériens, en utilisant un modèle MIP et un algorithme de recuit simulé amélioré (Enhanced Simulated Annealing, ESA), qui intègre des caractéristiques des algorithmes de recuit simulé (SA) et des algorithmes génétiques. Les résultats montrent que cette approche fournit des solutions de bonne qualité avec un temps de calcul et des solutions de meilleurs coûts par rapport à l'approche traditionnelle de SA. Ces résultats, démontrent que des solutions de bonne qualité peuvent être obtenues si les paramètres du SA sont bien ajustés. L'algorithme ESA produit des meilleurs solutions grâce à ses paramètres optimisés : un taux de refroidissement modifié en parabole, donnant un refroidissement lent, l'intégration, d'opérateurs génétiques, et la réorganisation des séquences d'opérations évolutives. L'algorithme ESA génère des solutions supérieures grâce à l'optimisation de ses paramètres, incluant un taux de refroidissement parabolique offrant un refroidissement progressif et mieux contrôlé, l'intégration d'opérateurs génétiques et d'une population de solution, ainsi que la réorganisation des séquences d'opérations évolutives. Pour valider et démontrer les performances de l'approche proposée, celle-ci a été testée sur des ensembles de données fortement contraints, fournis par un lycée nigérian. Les critères d'évaluation incluaient la violation des contraintes, le temps de simulation et le coût de la solution, avec des temps moyens de simulation de 37,91 et 42,16 secondes.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2021_hao_FCS] Approche MIP +SA pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">MIP +SA</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2021</span>
+        <span>Hao et al. (FCS)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article propose un modèle pour les problèmes HSTT pour la réforme des lycées en Chine. Cette réforme, lancée en 2014, permet aux élèves de suivre à la fois des matières obligatoires et des options, tout en prenant en compte davantage de contraintes liées aux étudiants. Les auteurs détaillent le modèle mathématique pour le CHSTT et présentent un algorithme de recuit simulé en deux phases (SA). La solution proposée divise la planification en deux parties : un emploi du temps pour les matières obligatoires et un autre pour les matières optionnelles, tous deux représentés sous forme de matrices bidimensionnelles. L'initialisation des solutions est réalisée en deux phases, en assignant d'abord les matières obligatoires, puis les matières optionnelles. Le voisinage de la solution est créé en échangeant les créneaux horaires pour résoudre les conflits d'enseignants. La première phase de l'algorithme vise à trouver une solution faisable en minimisant les violations des contraintes dures, tandis que la seconde phase optimise la solution en réduisant l'objectif global sans augmenter ces violations. Le processus continue jusqu'à l'obtention d'une solution optimale ou jusqu'à atteindre une température minimale. Les auteurs ont généré trois ensembles de données synthétiques pour simuler des cas réels de lycées de petite, moyenne et grande taille. Un total de 45 instances synthétiques avec différentes configurations de classes, de professeurs et de niveaux de contraintes pour les étudiants ont été testées. Le modèle et l'algorithme de recuit simulé en deux phases ont ensuite été appliqués dans 10 lycées réels.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2023_sun_DSM] Approche TS pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">TS</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2023</span>
+        <span>Sun et al. (DSM)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article s'incrit dans le cadre de la réforme des lycées en Chine, les institutions ont introduit un système de cours optionnels. Il s'agit d'un problème HSTT, Pour répondre à cette nouvelle organisation, un algorithme Two-Phase Tabu Search (TPTS) efficace en deux phases a été proposé. La première phase de cet algorithme se concentre sur la recherche d'une solution faisable, tandis que la seconde vise à améliorer cette solution. L'algorithme exploite les caractéristiques du modèle de coloration de graphe, ce qui permet de réduire les calculs redondants lors de la recherche de voisinage, augmentant ainsi l'efficacité du processus. En parallèle, une formulation MIP a été développée pour ce problème, qui est une variante réaliste du problème de planification des lycées. Le modèle a été enrichi avec l'introduction du concept de "groupe simultané", tout en prenant en compte des contraintes souples comme la synchronisation des plans d'enseignement, l'absence de périodes creuses pour les enseignants et une répartition équilibrée des cours. Dans cette étude, 15 cas de référence basés sur des lycées chinois ont été créés, répartis en trois échelles (petite, moyenne et grande). Les résultats montrent que les solutions obtenues avec l'algorithme proposé sont comparables, voire supérieures, à celles obtenues avec la programmation linéaire mixte pour 14 des 15 instances testées. Bien que le taux moyen de satisfaction des contraintes souples ait dépassé 71\%, certaines contraintes n'ont pas pu être entièrement respectées en raison des contradictions entre les règles et l'allocation des ressources.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2015_Phillips_COR] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2015</span>
+        <span>Phillips et al. (COR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            ) L'Université d'Auckland a servi de cadre pour valider ce modèle, complété par des tests réalisés sur des instances du concours ITC-2007. Ces expérimentations ont confirmé l'efficacité de la méthode pour des instances de grande taille et des situations réelles.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2017_Saviniec_ASC] Approche VNS-ILS pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">VNS-ILS</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2017</span>
+        <span>Saviniec et al. (ASC)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article aborde le problème HSTT, en proposant des approches métaheuristiques avec une recherche locale itérée (ILS) et de recherche à voisinage variable (VNS). Les auterus ont introduit de nouvelles structures de voisinage et des routines de recherche locale adaptées. Les algorithmes développés utilisent deux opérateurs de voisinage génériques, capables d'être facilement adaptés à des problèmes similaires. L'hybridation de ces opérateurs de voisinage améliore l'efficacité des procédures de recherche locale, en permettant une exploration plus approfondie et plus efficace de l'espace de solutions. En alternant entre deux procédures de recherche locale, ces algorithmes exploitent pleinement les solutions potentielles, optimisant ainsi l'affectation des créneaux horaires aux enseignants et aux salles. Les algorithmes ont été validés sur plusieurs variantes du problème, en utilisant sept instances publiques ainsi qu'un nouvel ensemble de données comprenant 34 instances réelles issues de lycées brésiliens, y compris des cas de grande taille. Les résultats expérimentaux démontrent que les algorithmes surpassent les approches existantes, en trouvant les meilleures solutions pour 38 des 41 instances testées. De plus, les algorithmes offrent des solutions optimales ou quasi optimales, surpassant les bornes inférieures générées par les MIP. Même la version la plus simple de ces algorithmes a surpassé le solveur gagnant du concours ITC2011 dans un grand nombre d'instances réelles. Les instances collectées auprès de différents lycées brésiliens ont été mises à disposition de la communauté.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2016_Domenech_EJOR] Approche MIP pour le problème TAP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">TAP</span>
+        <span class="badge year">2016</span>
+        <span>Domenech et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article présente le problème TAP au sein d'une institution espagnole, résolu à l'aide d'une approche MIP. Le modèle est appliqué au département de gestion de l'École d'Ingénierie Industrielle de Barcelone, rattachée à l'Université Polytechnique de Catalogne. Il optimise deux critères principaux : le premier vise à équilibrer la charge d'enseignement des enseignants, tandis que le second maximise leurs préférences pour les cours en fonction de leur catégorie. Dans un premier temps, le cas spécifique du département DOE-ETSEIB-UPC est traité, où une analyse détaillée permet de calibrer les écarts entre la charge d'enseignement et les préférences des enseignants. Le modèle prend en compte les exigences liées aux enseignants et aux cours, permettant ainsi d'obtenir une affectation optimale. Par ailleurs, pour évaluer la robustesse du modèle, une expérimentation est menée à partir de 750 instances générées aléatoirement, basées sur des données réelles, avec des variations dans le nombre d'enseignants et de cours. Les résultats démontrent que le modèle est capable de résoudre efficacement des situations impliquant jusqu'à 40 enseignants et 200 cours, en produisant des solutions acceptables dans un temps de calcul réduit.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2016_Vermuyten_EJOR] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2016</span>
+        <span>Vermuyten et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            et en réduisant les périodes sans cours. Le modèle est décomposé en deux étapes. La première étape consiste à minimiser les violations des préférences des enseignants en assignant les cours à des créneaux horaires et des salles. La deuxième étape réaffecte les salles aux cours pour minimiser les flux d'étudiants. Les flux sont modélisés de manière détaillée à l'aide de modèles de trafic piétonnier, où les déplacements des étudiants entre les salles sont représentés par un graphe, chaque arc correspondant à un couloir ou un escalier du bâtiment. Le temps de trajet total est calculé en fonction du flux d'étudiants traversant chaque arc. Le modèle a été appliqué aux données de la faculté d'économie et de gestion de la KU Leuven, campus de Bruxelles, et testé sur 21 instances adaptées issues de la littérature. Les emplois du temps générés réduisent significativement les flux d'étudiants par rapport à ceux créés manuellement. Cette approche a également prouvé son efficacité sur l'ensemble des instances ITC2007, démontrant ainsi son applicabilité à une large gamme de problèmes.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2017_Dorneles_EJOR] Approche MIP pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2017</span>
+        <span>Dorneles et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            deja définis
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2021_Fathi_JBE] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2021</span>
+        <span>Fathi et al. (JBE)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            sur la consommation de chauffage pour un bâtiment du complexe d'ingénierie de l'Université de Shiraz. Le modèle proposé vise à réduire la charge de chauffage et de climatisation en améliorant la planification des cours. Il prend en compte plusieurs facteurs tels que le partage des ressources, les dates de début de semestre, ainsi que la régulation de la température des salles. Le modèle thermique utilisé calcule la charge énergétique en fonction de la température ambiante (similaire à ANAGRAM). Par ailleurs, la méthode proposée réduit considérablement la complexité computationnelle, en diminuant le nombre de variables de décision ainsi que la taille des matrices de contraintes. Selon les tests les scénarios les plus efficace s pour réduire la consommation d'énergie consiste à commencer le semestre d'automne deux semaines plus tôt, avec une température des salles fixée à 23°C. Ce scénario pourrait réduire la consommation énergétique de plus de 50\% par rapport à un début de semestre traditionnel. De manière générale, la comparaison entre les conditions actuelles et optimales révèle une réduction potentielle d'environ 12\% de la consommation globale d'énergie.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2017_Song_E] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2017</span>
+        <span>Song et al. (E)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article propose une solution au problème UCTP en intégrant une dimension liée à la consommation énergétique, permettant ainsi de réduire la consommation d'énergie à travers l'optimisation des emplois du temps. L'algorithme développé permet de diminuer la consommation d'énergie dans les bâtiments universitaires. En effet, une allocation plus efficace des salles de classe, en tenant compte de leurs capacités spatiales et fonctionnelles, peut contribuer à des économies d'énergie, car ces caractéristiques influencent directement la consommation d'énergie. Les résultats expérimentaux montrent que les emplois du temps générés permettent une économie de 4\% pendant la saison de chauffage ou de climatisation, comparativement aux emplois du temps existants. De plus, en assouplissant certaines contraintes strictes, des économies supplémentaires peuvent allé jusqu'à 5 \%. La comparaison entre la consommation énergétique totale de l'emploi du temps existant et celle de l'emploi du temps optimal met en évidence qu'une mauvaise allocation des salles peut entraîner une surconsommation d'énergie.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2015_lewis_EJOR] Approche TS+SA pour le problème PE-CTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">TS+SA</span>
+        <span class="badge">PE-CTT</span>
+        <span class="badge year">2015</span>
+        <span>Lewis et al. (EJOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article traite du problème PE-CTT et propose un algorithme métaheuristique en deux étapes pour le résoudre de manière approximative. L'étude souligne que l'augmentation de la connectivité de l'espace des solutions améliore généralement les performances. Cela a conduit à la conception d'opérateurs de voisinage offrant plus de flexibilité. L'algorithme se déroule en deux phases. La première phase, une solution initiale est construite en assignant les événements un par un à des créneaux horaires, tout en évitant les violations des contraintes dures. Cette étape se concentre uniquement sur la faisabilité du problème, sans prendre en compte les contraintes souples. Puis cette méthode utilise la recherche tabou avec une fonction de coût simple, adaptée de l'algorithme PartialCol. Ensuite pendant la deuxième phase, le recuit simulé (SA) est utilisé, avec pour objectif de minimiser le nombre de violations des contraintes souples. Le refroidissement se fait via des chaînes de Markov, en fonction des opérateurs de voisinage utilisés. Cette phase ne nécessite qu'un seul paramètre à ajuster : la température finale. Plusieurs opérateurs de voisinage ont été définis, dont l'un sélectionne aléatoirement deux événements distincts et tente de les échanger dans des créneaux horaires disponibles (en vérifiant la disponibilité des salles). Trois autres opérateurs sont basés sur le mécanisme des chaînes de Kempe, combinés avec le premier opérateur de voisinage. Les résultats expérimentaux, obtenus sur ITC-2007, montrent que l'algorithme proposé fonctionne aussi bien voir mieux que les autres méthodes de la littérature.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2017_Skoullis_ASC] Approche CSO pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">CSO</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2017</span>
+        <span>Skoullis et al. (ASC)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Dans cette contribution, il est présenté l'application d'un algorithme hybride basé sur l'optimisation par essaim de chats (CSO) pour résoudre le problème HSTT. L'algorithme s'inspire du comportement des chats lors de la recherche de nourriture. L'optimum global est assimilé à la nourriture, tandis que l'espace des solutions représente la zone où cette nourriture se trouve. Chaque solution est modélisée par un chat qui explore cet espace de recherche. L'initialisation de l'algorithme se fait en générant un ensemble de chats, chacun ayant une position spécifique dans l'espace des solutions, composé de M dimensions, avec des vitesses distinctes pour chaque dimension et une valeur de fitness calculée à l'aide d'une fonction d'évaluation. Les chats représentent l'emploi du temps hebdomadaire sous la forme d'une matrice bidimensionnelle, où les lignes correspondent aux classes et les colonnes aux créneaux horaires disponibles. Chaque chat explore l'espace de recherche dans le but de trouver une solution améliorée, c'est-à-dire une solution avec une meilleure valeur de fitness. L'algorithme fonctionne selon deux modes distincts : le mode de recherche et le mode de poursuite. En mode de recherche, chaque chat observe son environnement pour déterminer la prochaine action à entreprendre. En mode de poursuite, le chat se déplace rapidement dans l'espace de solutions à la recherche de la meilleure position. Les performances de cet algorithme ont été évaluées à l'aide de données réelles, collectées dans divers lycées en Grèce. Les résultats montrent que l'algorithme proposé surpasse les autres méthodes publiées dans la littérature, tant en termes de qualité des solutions obtenues qu'en termes de réduction du temps de calcul.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2015_AlYakoob_COR] Approche MIP pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2015</span>
+        <span>Alyakoob et al. (COR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article examine le problème HSTT, dans le cadre d'une étude de cas au Koweït. Une solution initiale, basée sur un modèle MIP, s'est révélée inutilisable pour les instances de test réalistes de grande taille. Par conséquent, deux approches de décomposition du problème sont proposées. La première approche repose sur un modèle en deux étapes. Dans la première étape, les créneaux horaires hebdomadaires sont attribués aux classes. Ensuite, dans la seconde étape, les enseignants sont affectés aux classes en fonction des créneaux horaires prédéfinis. Plutôt que de générer les emplois du temps hebdomadaires directement dans le modèle, en effet cette dernière sélectionne des combinaisons valides d'emplois du temps à partir de l'ensemble des solutions faisables pour les enseignants, afin d'attribuer les classes à des sections par niveaux scolaires. En raison du nombre exponentiel de variables dans ce modèle, une méthode de génération de colonnes a été conçue pour exploiter la structure de celui-ci. Les deux approches, ont permis de résoudre les six problèmes de test en des temps de calcul relativement courts. Le modèle avec la génération de colonnes a surpassé l'autre approche, tant en termes de temps CPU que du nombre d'enseignants nécessaires. La prise en compte des préférences des enseignants pour certaines classes et périodes, ainsi que des enjeux d'équité et de satisfaction globale, n'ont pas été intégrées dans le modèle.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2021_Siddiqui_ESA] Approche metaheuristique pour le problème HSTT</h3>
+    <div class="paper-meta">
+        <span class="badge meta">metaheuristique</span>
+        <span class="badge">HSTT</span>
+        <span class="badge year">2021</span>
+        <span>Siddiqui et al. (ESA)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            deja fait
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2016_mendez_COR] Approche MIP pour le problème PE-CTT + SSP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">PE-CTT + SSP</span>
+        <span class="badge year">2016</span>
+        <span>Mendez et al. (COR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Dans cet article, le Problème Généralisé de Planification des Cours après Inscription (GPECTP) est présenté en détail. Ce problème combine des aspects du problème PECTP et du problème de répartition des étudiants (SSP), et trouve son origine dans une application concrète au sein d'une université privée située à Buenos Aires, en Argentine. Une formulation en MIP est proposée, ainsi qu'un algorithme heuristique développé sur la base de cette modélisation. Dans le cadre du GPECTP, toutes les contraintes liées aux opérations et aux ressources sont considérées comme des contraintes dures, ce qui implique la recherche d'une solution satisfaisant l'ensemble de ces exigences. L'université concernée propose 12 programmes d'études différents, environ 120 cours, et compte 220 membres du corps enseignant ainsi que 1200 étudiants inscrits. L'année universitaire est divisée en deux semestres, chacun étant planifié de manière indépendante. Les créneaux horaires disponibles pour l'enseignement sont fixés pour toute la durée du semestre. L'heuristique a été testée sur trois cas réels, obtenant des résultats satisfaisants. L'approche a permis de trouver des solutions présentant un écart de qualité de 3 à 4 \%, tout en répondant aux demandes des étudiants avec un taux similaire de satisfaction. Depuis le premier semestre de 2013, le solveur est utilisé pour la planification des semestres.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2016_pereira_AOR] Approche MIP pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge para">MIP</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2016</span>
+        <span>Pereira et al. (AOR)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Ce travail traite du problème UCTP en proposant un modèle MIP pour une faculté à Rio de Janeiro, au Brésil. Le modèle a été développé en intégrant plusieurs objectifs, tels que l'allocation optimale des professeurs en fonction de leur titre académique, la minimisation des coûts, le nombre de famille contraintes satisfaites et la prise en compte des préférences horaires des enseignants. L'un des principaux objectifs du modèle est la minimisation des coûts. Pour cela, il fait appel à la technique du "piggybacking", permettant aux étudiants de différents programmes de suivre un même cours lorsque les formations ont des contenus similaires. Le modèle intègre également des contraintes liées à la planification des cours d'une seule séance le même jour et, en cas d'emplois du temps fragmentés, à la priorisation du remplissage de la première session d'enseignement plutôt que de la seconde. De plus, le modèle a été conçu pour respecter les préférences horaires des enseignants, bien que celles-ci soient souvent en conflit avec d'autres objectifs, tels que la minimisation des coûts ou l'optimisation de l'allocation des professeurs selon leur grade académique. Les contraintes dures incluent, l'évitement des conflits d'horaires entre enseignants, la prévention des chevauchements de cours, ainsi que la garantie que tous les cours prévus pour une période soient disponible. Les contraintes souples, quant à elles, ont été modélisées à l'aide de variables binaires. Chaque variable prenait la valeur 1 lorsque la famille de contrainte souple associée était satisfaite. L'évaluation du modèle a montré qu'il surpassait les méthodes manuelles en termes de qualité et de rapidité d'exécution. Approuvé par les gestionnaires de la faculté, ce modèle est utilisé depuis le second semestre de 2011.
+        </p>
+    </div>
+</article>
+
+<article class="paper-card">
+    <h3 class="paper-title">[2005_Thompson_JOM] Approche SA pour le problème UCTP</h3>
+    <div class="paper-meta">
+        <span class="badge meta">SA</span>
+        <span class="badge">UCTP</span>
+        <span class="badge year">2005</span>
+        <span>Thompson et al. (JOM)</span>
+    </div>
+    <div class="notes-section">
+        <strong>Résumé de lecture :</strong>
+        <p style="margin: 5px 0 0 0;">
+            Cet article traite du problème UCTP. Pour aborder cette problématique, les auteurs ont recours à une procédure heuristique basée sur le recuit simulé et ont conçu trois approches distinctes. Les trois approches sont les suivantes S-Control qui est une approche témoin dans laquelle l'emploi du temps est conçu pour éviter ou minimiser les conflits entre les cours obligatoires, la deuxième S-Faculty elle ajoute des restrictions supplémentaires suggérées par les enseignants, telles que la minimisation des conflits horaires entre des cours d'une même discipline ou entre des cours spécifiques. Et enfin, S-Assign qui prend explicitement en compte les préférences des étudiants et assigne les étudiants aux cours à chaque itération de l'heuristique, nécessitant ainsi des variables et contraintes supplémentaires par rapport aux deux autres méthodes. Pour collecter les informations sur la demande non contrainte des étudiants, ceux-ci ont été interrogés via Internet. Comparée à l'approche classique (S-Control), l'approche S-Assign, qui intègre les préférences des étudiants, a montré une amélioration de la qualité des solutions. Les résultats de l'expérience ont révélé que les emplois du temps construits dans l'approche S-Faculty ne surpassent pas ceux issus de l'approche témoin S-Control. En ce qui concerne les limites de l'article, il est faut noter que au plus 40\% des étudiants ont fourni leurs préférences pour les cours.
+        </p>
+    </div>
+</article>
+
             </section>
 
             <section id="meta-section">
@@ -108,5 +534,3 @@ J'ai aussi ajouté une barre latérale de navigation rapide pour que ce soit sup
 
 </body>
 </html>
-
-```
